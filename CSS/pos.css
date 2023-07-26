@@ -1,0 +1,55 @@
+.pos {
+    position: static;
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+}
+
+.pos1 {
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+}
+
+/* <!-- static auto yete kai ghetla nasel tr ,hight - width = yet nahi -->  */
+
+.rel {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    left: 145px;
+    bottom: 28px;
+}
+
+/* <!-- last element pasun top  count hoto, top vr karycha asel tr -top gheta ,hight width border gheta yete --> */
+.abs {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    top: 100px;
+    right: 50px;
+}
+
+/* <!-- Top -UI cha gheto,top bottom left right =0 pixal la ghetla tr cornar la jat--> */
+.stick {
+    position: sticky;
+    /* height: 30px; */
+    top: 0px;
+    width: 1406px;
+    border: 1px solid black;
+    background-color: cadetblue;
+
+}
+
+/*  <!-- scroll karto teva top la box mhade dist rahto ,top=0 takycha  --> */
+
+.footer {
+    width: 1406px;
+    height: 30px;
+    border: 1px solid black;
+    background-color: rgb(161, 251, 17);
+    position: fixed;
+    bottom: 0px;
+}

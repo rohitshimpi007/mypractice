@@ -1,0 +1,45 @@
+ /* *{
+    color: blue;
+    font-size: 30px;
+} */
+div h2:hover{
+    background-color: aquamarine;
+    width: 200px;
+}
+/* hover = pointer la nela ki colour change
+width add keli tr pointer nela ki zoom hota  */
+p:hover{
+    background-color: blueviolet;
+    font-size: 40px;
+}
+
+a:active{
+    color: violet;
+}
+/* active= pointer cha click karun thevla teva colour change hoto
+USE - Button */
+
+h4::first-letter{
+    color: yellow;
+    font-size: 50px;
+}
+/* first letter = first letter beautify md adjust font size  */
+
+h5::first-line{
+    color: turquoise;
+}
+/* first line = passage first line beautify  */
+
+h6::selection{
+    color: rgb(240, 40, 13);
+    background-color: yellow;
+}
+/* selection =pointer nela ki tya line cha colour change hoto  */
+
+h1::after{ 
+    content: boy;
+}
+
+h3::before{
+    content: surname;
+}

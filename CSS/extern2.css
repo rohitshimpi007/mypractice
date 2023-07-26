@@ -1,0 +1,15 @@
+h2{
+    color : pink;
+}
+
+p{
+    color:blueviolet
+}
+
+/*externel css: 1.element selector
+                2. class selector : 
+                syntax .(period operator)classname { pro:val} 
+                */
+
+.container {
+    color: brown;}
