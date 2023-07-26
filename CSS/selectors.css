@@ -1,0 +1,29 @@
+#div1{
+    color: pink;
+    }
+    
+    #div2{
+        color: yellow;
+    }
+    /* <!-- id =  la uniq name thevav lagta css la #id asa use karta --> */
+    
+    div p{
+        background-color: aquamarine;
+    }
+    /* descendant selectot - space ( _ ) all tag container apply  */
+    
+    span > h1{
+    background-color: blueviolet;
+    }
+    /* child selector - greater than (>) all element apply */
+    
+    h4 + h2{
+    background-color: yellowgreen;
+    }
+    /* adjacent selector - plus(+) jya tag la apply karycha ahy tyala + karun add karta 
+    nearest sibling beautfy .javal asel tya tag la apply hoto */
+    p ~ h3{
+        background-color: red;
+    }
+    /* genral sibiling selector - (~) apply all tag under nd outer 
+    eg. colour ,font. */
