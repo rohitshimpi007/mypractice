@@ -1,0 +1,24 @@
+<div class="main">
+    <h2>Login Form</h2>
+    <form [formGroup]="loginForm" class="formAlinment">
+        <mat-form-field >
+            <mat-label>User Name</mat-label>
+            <input type="text" matInput formControlName="userName">
+          
+            <mat-hint *ngIf="!loginForm.get('userName')?.touched">Please enter User Name </mat-hint>
+            <mat-error>User Name is <strong>required</strong></mat-error>
+        </mat-form-field>
+
+        <br>
+        <mat-form-field >
+            <mat-label>Password</mat-label>
+            <input matInput appNameValidation placeholder="Enter your name" formControlName="Password">
+            <mat-error>Password is <strong>required</strong></mat-error> 
+       
+        </mat-form-field>
+        <br>
+    
+        <button mat-raised-button color="accent" (click)="login()">Login</button><br> <br>
+        <button mat-raised-button color="warn" routerLink="/signUp">New User?</button>
+    </form>
+</div>
