@@ -1,6 +1,6 @@
 <div class="main"> 
     <button class="backBtm" routerLink="/owner">Back</button> 
- 
+ <div class="container">
     <form [formGroup]="sinupForm" class="formAlinment"> 
        <h1>Owner Sing Up</h1> 
        <div> 
@@ -8,7 +8,8 @@
             <mat-label>Enter user Name</mat-label> 
            <input type="text" matInput formControlName="userName" > 
            <mat-hint *ngIf="!sinupForm.get('userName')?.touched" class="hint">Please Enter user Name </mat-hint> 
-            <mat-error *ngIf="sinupForm.get('userName')?.hasError('required')">User Name is <strong>required</strong></mat-error> 
+            <mat-error *ngIf="sinupForm.get('userName')?.hasError('required') && !sinupForm.get('userName')?.hasError('pattern')">User Name is <strong>required</strong></mat-error>
+            <mat-error *ngIf="sinupForm.get('userName')?.hasError('pattern')">User Name is <strong>Only Alphabates</strong></mat-error>  
            </mat-form-field> 
        </div> 
        
@@ -63,7 +64,8 @@
        
       </div> 
  
-       <button mat-raised-button color="accent" (click)="submit()" [disabled]="!sinupForm.valid">Submit</button> 
+       <button mat-raised-button color="accent" (click)="submit()" >Submit</button> 
     </form> 
+</div>
 </div>
 

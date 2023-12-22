@@ -14,6 +14,7 @@ export class OwnerSignUpComponent {
   gender: boolean = false;
   showpass = false;
   endPoint:string = "owner";
+  ownerResponce: any;
   constructor(private fb: FormBuilder,private apiCallService: ApiCallService,
     private router: Router) { }
 
@@ -23,7 +24,7 @@ export class OwnerSignUpComponent {
 
   formDetails() {
     this.sinupForm = this.fb.group({
-      userName: ['', Validators.required],
+      userName: ['',[ Validators.required , Validators.pattern("[A-Za-z ]*$")]],
       email: ['', [Validators.required, Validators.pattern(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)]],
       panNumber: ['',[Validators.required]],
       mobileNumber: ['', [Validators.required, Validators.pattern('[0-9+]*')]],
@@ -41,7 +42,9 @@ export class OwnerSignUpComponent {
   }
 
   submit() {
-    // this.apiCallService.postApiCall(this.endPoint,this.sinupForm.value).subscribe(res=>{})
+    this.apiCallService.postApiCall(this.endPoint,this.sinupForm.value).subscribe(res=>{
+      this.ownerResponce = res;
+    })
     this.router.navigateByUrl('/owner/ownerSuccess');
   }
 

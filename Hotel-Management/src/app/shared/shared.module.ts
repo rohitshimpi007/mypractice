@@ -4,6 +4,7 @@ import { MatInputModule } from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatRadioModule} from '@angular/material/radio';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [],
@@ -13,14 +14,16 @@ import {MatRadioModule} from '@angular/material/radio';
     MatButtonModule,
     ReactiveFormsModule,
     FormsModule,
-    MatRadioModule
+    MatRadioModule,
+    HttpClientModule
   ],
   exports: [
     MatInputModule,
     MatButtonModule,
     ReactiveFormsModule,
     FormsModule,
-    MatRadioModule
+    MatRadioModule,
+    HttpClientModule
 
   ]
 })
